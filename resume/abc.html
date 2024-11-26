@@ -1,0 +1,71 @@
+/* main-container styling */
+.main-container {
+    width: 21cm; 
+    height: 29.7cm; /* Adjust to A4 height */
+    margin: 20px auto;
+    border: 3px solid #000;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.left-column {
+    width: 40%;
+    background-color: #153448;
+    color: white;
+}
+
+.right-column {
+    width: 60%; /* Adjust to fit A4 page */
+    background-color: #F5F5F5;
+}
+
+/* Adjust img, contact, etc. */
+.img {
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.contact, .education, .skills, .languages {
+    margin-left: 10%;
+    color: #F5F5F7;
+}
+
+.profile, .work-experience {
+    margin-left: 3%;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+    .left-column, .right-column {
+        width: 100%;
+        height: auto;
+    }
+
+    .img {
+        margin: 0;
+        text-align: center;
+    }
+
+    h1, h3, .contact, .education, .skills, .languages {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .profile, .work-experience {
+        margin: 5%;
+    }
+}
+
+@media(max-width: 480px) {
+    .row {
+        flex-direction: column;
+    }
+}
