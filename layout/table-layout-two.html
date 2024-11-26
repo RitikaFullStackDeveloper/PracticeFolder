@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Layout</title>
+        <style>
+            /* styling for table */
+            table{
+                border-style: solid;
+                height: 20vh;
+                width: 30vw;
+                text-align: center;
+                margin-left: 35%;
+                margin-top: 100px;
+            }
+             /* styling for td */
+            td{
+                border: solid;
+            }
+        </style>
+    </head>
+    <body style="background-image: url(../assets/image/table-layout-bg.jpg);background-repeat: no-repeat; background-size: cover;">
+        <h1 style="text-align: center;">Table Layout</h1>
+        <table>
+            <tr>
+                <td>A</td>
+                <td colspan="2">B</td>
+            </tr>
+            <tr>
+                <td colspan="2">C</td>
+                <td rowspan="2">D</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>F</td>
+            </tr>
+        </table>
+    </body>
+</html>

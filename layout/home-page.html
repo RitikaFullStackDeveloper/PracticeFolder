@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Layout</title>
+    <style>
+        /* styling for table */
+        table {
+            width: 100%;
+            scroll-behavior: smooth;
+
+        }
+       
+
+        /* styling for th */
+        th {
+            background-color: #445D48;
+            height: 10vh;
+        }
+
+        /* styling for row-two */
+        .row-two {
+            height: 40vh;
+            background-color: #D6CC99;
+        }
+
+        /* styling for row-three */
+        .row-three {
+            height: 40vh;
+            border: 1px solid black;
+            background-color: #D6CC99;
+        }
+
+        /* styling for row-four */
+        .row-four {
+            height: 40vh;
+            border: 1px solid black;
+            background-color: #D6CC99;
+        }
+
+        /* styling for row-five */
+        .row-five {
+            height: 50vh;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+
+        /* styling for last-row */
+        .last-row {
+            background-color: #445D48;
+            height: 10vh;
+            text-align: center;
+        }
+         /* styling for projects */
+        .projects {
+            width: 100vw;
+            height: 50vh;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+         /* styling for pro-1 */
+        .pro-1 {
+            width: 16.6vw;
+
+        }
+        @media(max-width:480px){
+
+        }
+        @media(min-width:768px ) and (max-width:1024px){
+
+        }
+        @media(min-width:480px) and (max-width:768px){
+
+}
+    </style>
+</head>
+
+<body style="margin: 0%;">
+    <table>
+        <!-- first row -->
+        <tr>
+            <th><a href="#home">Home</th></a>
+            <th><a href="#about">About</th></a>
+            <th><a href="#project">Project</th></a>
+            <th><a href="#contact">Contact</th></a>
+        </tr>
+
+        <!-- second row -->
+        <tr class="row-two" id="home">
+            <td colspan="4">
+                <h1 style="text-align: center;">Welcome to my home page</h1>
+            </td>
+        </tr>
+
+        <!-- third row -->
+        <tr class="row-three" id="about">
+            <td colspan="4">
+                <h1 style="text-align: center;">About Me</h1>
+                <p> &emsp; My self Ritika Charpe, by working profession I'm full stack devloper
+                </p>
+                <p>&emsp; I'm expert in Mobile Development and IOS Development. </p>
+                <p> &emsp; With the help of Hyper Text Markup Language(HTML), Cascadinbg Style
+                    Sheet(CSS),</p>
+
+                <p> &emsp; I marked various Projects</p>
+
+                <br>
+                </p>
+            </td>
+        </tr>
+
+        <!-- fourth row -->
+        <tr class="row-four" id="project">
+            <td colspan="4">
+
+                <!-- for form -->
+                <div class="projects">
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../form/form.html">
+                            <img src="../assets/image/form.png" alt="fomrm img" height="300vh" width="195vw">
+                            <h3>Form</h3>
+                        </a>
+                    </div>
+
+                    <!-- for resume -->
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../resume/resume.html">
+                            <img src="../assets/image/resume.png" height="300" width="198vw">
+                            <h3>Resume</h3>
+                        </a>
+                    </div>
+
+                    <!-- for first page -->
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../practice/firstpage.html">
+                            <img src="../assets/image/movie.avif" height="300" width="198vw">
+                            <h3>First Page</h3>
+                        </a>
+                    </div>
+
+                    <!-- for chess  -->
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../grid/grid.html">
+                            <img src="../assets/image/chess-bg.jpg" height="300" width="198vw">
+                            <h3>Chess</h3>
+                        </a>
+                    </div>
+
+                    <!-- for frame page -->
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../practice/iframe.html">
+                            <img src="../assets/image/shivaji-maharaj.jpg" height="300" width="198vw">
+                            <h3>Shivagi Maharaj</h3>
+                        </a>
+                    </div>
+
+                    <!-- for vedio table layout -->
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../layout/video-table-layout.html">
+                            <img src="../assets/image/video-img.png" height="300" width="198vw">
+                            <h3>Video Layout</h3>
+
+                            <!-- tourism  -->
+                        </a>
+                    </div>
+                    <div class="pro-1">
+                        <a style="text-decoration: none; text-align: center;" href="../flex/tourism-one.html">
+                            <img src="../assets/image/tourism-two.jpeg" height="300" width="198vw">
+                            <h3>Tourism</h3>
+                        </a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <!-- footer -->
+        <tfoot class="last-row" id="contact">
+            <tr>
+                <th><a href="https://github.com/RitikaFullStackDeveloper/Ritika_html_project">Github</a></th>
+                <th><a href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin">Linkdin
+                </th></a>
+                <th><a href="https://stackoverflow.com/">Stack overflow</th></a>
+                <th><a href="https://join.skype.com/invite/u7sAVOdTr5eq">Skype</th></a>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
