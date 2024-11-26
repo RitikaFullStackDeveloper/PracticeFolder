@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Practice</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: lightcyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100%;
+            width: 40%;
+            background-color:#9A7E6F ;
+        }
+        .btn{
+            height: 10%;
+            width: 24%;
+            background-color:  #54473F;
+            color: aliceblue ;
+            margin-left: 40%;
+        }
+        #demo{
+            height: 8%;
+            width: 95%;
+            background-color: rgb(4, 0, 1);
+            color: aliceblue;
+            margin-left: 3%;
+        }
+        .input{
+            height: 7%;
+            width: 95%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 3%;
+            gap: 9%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // function addition(){
+        //    let x = 10;
+        //    let y = 20;
+        //    let z = Number(x) + Number(y);
+        //    document.getElementById("demo").innerHTML = z;  
+        //    alert(z);  
+        //    console.log(z);
+        //     }
+            // concatinate
+            function string1(){
+           let x = document.getElementById("input-one");
+           let y = document.getElementById("input-two");
+           let z = x + y;
+           document.getElementById("demo").innerHTML = z;  
+           alert(z);  
+           console.log(z);
+            }
+
+            function string2(){
+           let x = document.getElementById("input-one");
+           let y = document.getElementById("input-two");
+           let z = x + y;
+           document.getElementById("demo").innerHTML = z;  
+           alert(z);  
+           console.log(z);
+            }
+
+            function string3(){
+           let x =  document.getElementById("input-one");
+           let y = document.getElementById("input-two");
+           let z = x == y;
+           document.getElementById("demo").innerHTML = z;  
+           alert(z);  
+           console.log(z);
+            }
+
+
+        //     let x = 0;
+        //     function Int(){
+        //    let x =+ 1;
+        //    document.getElementById("demo").innerHTML = x;  
+        //    alert(x);  
+        //    console.log(x);
+        //     }
+    </script>
+    <div class="container">
+        <div class="box">
+    
+            <div  id="demo"></div>
+            <br>
+            <input type="text" class="input" id="input-one" placeholder="Enter first number">
+    
+            <br>
+            <input type="text" class="input" id="input-two" placeholder="Enter second number">
+            <br>
+            <button class="btn" onclick="string1()">"ABC" + "def"</button>
+            <br><br>
+            
+            <div  id="demo"></div>
+            <br>
+            <input type="text" class="input" id="input-one" placeholder="Enter first number">
+    
+            <br>
+            <input type="text" class="input" id="input-two" placeholder="Enter second number">
+            <br>
+         
+
+            <button class="btn" onclick="string2()">"10" + 10</button>
+
+            <button class="btn" onclick="string3()"> "ABC" == abc</button>
+
+         
+            <br>
+            <br>
+
+
+        </div>
+    </div>
+</body>
+</html>

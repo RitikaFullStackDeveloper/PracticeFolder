@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js-layout</title>
+        <style>
+            /* main container */
+            .main-container {
+                height: 70vh;
+                width: 50vw;
+                background-color: #DBD3D3;
+                margin-left: 20%;
+                margin-top: 5%;
+            }
+
+            /* first-container */
+            .first-container {
+                height: 20%;
+                width: 100%;
+                background-color: #697565;
+            }
+
+            /* display */
+            #display {
+                width: 80%;
+                height: 40%;
+                margin-left: 10%;
+                margin-top: 5%;
+                text-align: center;
+            }
+
+            /* second container */
+            .second-container {
+                width: 80%;
+                height: 30%;
+                display: flex;
+                justify-content: center;
+            }
+
+            /* button.
+            . */
+            .button {
+                width: 30%;
+                height: 40%;
+                margin-left: 10%;
+                background-color: #3C3D37;
+                color: #ffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            // parameter passs
+            function red() {
+
+                document.getElementById("display").style.backgroundColor = "red"
+            }
+            // substraction
+            function green() {
+
+                document.getElementById("display").style.backgroundColor = "green"
+            }
+            // alert using accute (``)
+            function myProgram(x) {
+
+                alert(`hello ${x}`)
+            }
+            // function call functiion
+            function greetingsTo(y) {
+                morning(y);
+                noon(y);
+                evening(y);
+                night(y);
+            }
+            function morning(y) {
+                alert(`good morning ${y}`)
+            }
+            function noon(y) {
+                alert(`good afternoon ${y}`)
+            }
+            function evening(y) {
+                alert(`good evening ${y}`)
+            }
+            function night(y) {
+                alert(`good night ${y}`)
+            }
+            // anonymous arrow  function
+            (function () {
+                alert('r u ready')
+            })();
+
+            // arrow function
+            const greeting = (z) => alert(`hello ${z}`);
+
+              // arrow function ex.
+            const calc = (a,b) => a * b;
+            document.getElementById('display').innerHTML = calc(4,5)
+        </script>
+
+
+        <!-- main-container -->
+        <div class="main-container">
+            <!-- first comntainer -->
+            <div class="first-container">
+                <input type="text" id="display" readonly>
+            </div>
+            <br>
+            <br>
+
+            <!-- second container -->
+            <div class="second-container">
+                <!-- function with parameter -->
+                <button class="button" onclick="red()">red</button>
+                <!-- function without parameter -->
+                <button class="button" onclick="green()">green</button>
+
+                <button class="button" onclick="myProgram(' ritika')">prog1</button>
+
+                <!-- function call function button -->
+                <button class="button" onclick="greetingsTo(' Para')">prog2</button>
+
+                <!-- afrrow function button -->
+                <button class="button" onclick="greeting(' arrow function')">prog3</button>
+
+            </div>
+        </div>
+    </body>
+
+    </html>
+</body>
+
+</html>

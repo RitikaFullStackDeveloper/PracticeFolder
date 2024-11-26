@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Practice</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 60%;
+            width: 40%;
+            background-color: #DFD3C3;
+        }
+
+        .btn {
+            height: 10%;
+            width: 24%;
+            background-color: #C5705D;
+           margin-left: 3%;
+            color: aliceblue;
+        }
+
+        #demo {
+            height: 30%;
+            width: 100%;
+            background-color: #D0B8A8;
+            color: aliceblue;
+        }
+
+        .input {
+            height: 7%;
+            width: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 5%;
+            gap: 9%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function compareOne() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x > y) {
+                alert("x is greater")
+            }
+            else {
+                alert("y is greater")
+            }
+
+        }
+        function compareTwo() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x <= y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+        function compareThree() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x < y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+        function compareFour() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x <= y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+        function compareFive() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x <= y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+        // check eaual to or not
+        function equalTo() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x == y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+
+          // check two values are eual without type conversion(both type and value must match)
+          function equalTo2() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x === y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+
+         // check two values are not eual after type conversion
+          function equalTo3() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x != y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+
+         // check two values are not eual withot type conversion
+         function equalTo3() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x !== y) {
+                alert("true")
+            }
+            else {
+                alert("false")
+            }
+
+        }
+            
+    </script>
+    <div class="container">
+        <div class="box">
+
+            <div id="demo"></div>
+
+            <br>
+            <br>
+       <input type="number" class="input" id="input-one" placeholder="Enter first number">
+    
+            <br>
+            <input class="input" type="number"id="input-two" placeholder="Enter first number">
+            <br>
+            <button class="btn" onclick="compareOne()">x > y </button>
+
+            <button class="btn" onclick="compareTwo()">x <= y</button>
+
+            <button class="btn" onclick="compareThree()">x < y</button>
+
+            <button class="btn" onclick="compareThree()">x == y</button>
+
+            <button class="btn" onclick="compareThree()">x === y</button>
+
+            <button class="btn" onclick="compareThree()">x != y</button>
+
+            <button class="btn" onclick="compareThree()">x !== y</button>
+
+
+            <!-- <button class="btn" onclick="Int()">ADD</button> -->
+
+
+            <br>
+            <br>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

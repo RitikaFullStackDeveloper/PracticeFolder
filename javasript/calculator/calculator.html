@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display {
+            height: 20px;
+            width: 20vw;
+            background-color: #697565;
+        }
+
+        .container {
+            border-style: solid;
+            width: 30%;
+            margin-left: 30%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function AditionFun() {
+            let x = document.getElementById('input-one').value
+            let y = document.getElementById('input-two').value
+            z = Number(x) + Number(y)
+            document.getElementById("demo").innerHTML = z;
+        }
+        function substractionFun() {
+            let x = document.getElementById('input-one').value
+            let y = document.getElementById('input-two').value
+            z = Number(x) - Number(y)
+            document.getElementById("demo").innerHTML = z;
+        }
+        function multiplicationFun() {
+            let x = document.getElementById('input-one').value
+            let y = document.getElementById('input-two').value
+            z = Number(x) * Number(y)
+            document.getElementById("demo").innerHTML = z;
+        }
+        function divisionFun() {
+            let x = document.getElementById('input-one').value
+            let y = document.getElementById('input-two').value
+            z = Number(x) / Number(y)
+            document.getElementById("demo").innerHTML = z;
+        }
+        function ResultFun() {
+         
+            document.getElementById("demo").innerHTML = z;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="display" id="demo"></div>
+        <br>
+        <br>
+        <input type="text" id="input-one">
+        <br>
+        <br>
+        <input type="text" id="input-two">
+        <br>
+        <br>
+        <button onclick="AditionFun()">Adition</button>
+        <br>
+        <button onclick="substractionFun()">substraction</button>
+        <br>
+        <button onclick="multiplicationFun()">multiplication</button>
+        <br>
+        <button onclick="divisionFun()">division</button>
+        <br>
+        <br>
+        <button onclick="ResultFun()">=</button>
+    </div>
+</body>
+
+</html>

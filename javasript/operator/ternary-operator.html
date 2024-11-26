@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .box {
+            height: 80%;
+            width: 40%;
+            background-color: #ECDFCC;
+
+
+        }
+
+        #demo {
+            height: 20%;
+            width: 100%;
+            background-color: #3C3D37;
+            color: aliceblue;
+            text-align: center;
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input {
+            height: 6%;
+            width: 70%;
+            margin-left: 10%;
+        }
+
+        .btn {
+            height: 8%;
+            width: 20%;
+            border-radius: 12px;
+            margin-left: 35%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(/assets/image/ui-bg.avif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body >
+    <script>
+        // EVEN ODD
+        function evenOdd() {
+            const x = document.getElementById("input-one").value;
+
+
+            // processing
+            let y = x % 2 == 0 ? "even" : "odd";
+
+            // output
+            document.getElementById("demo").innerHTML = y;
+        }
+
+        // ELIGIBLE OR NOT
+            function eligibleorNot() {
+                const age = document.getElementById("input-one").value;
+
+
+                // processing
+                let y = age > 18 ? "you are eligible" : "not eligible";
+
+                // output
+                document.getElementById("demo").innerHTML = y;
+            }
+
+        // NUM IS GREATER OR NOT
+        function conditionCheck() {
+                const x = 20;
+                const y = document.getElementById("input-one").value;
+
+                // processing
+                let z = x > y ? "  x is greater" : "y is greater";
+
+                // output
+                document.getElementById("demo").innerHTML = z;
+        }
+
+    </script>
+    <!-- container -->
+    <div class="container">
+        <div class="box">
+            <!-- display -->
+            <div id="demo"></div>
+            <br>
+            <br>
+            <!-- input one -->
+            <input type="text" class="input" id="input-one">
+            <br>
+            <br>
+            <br>
+          
+
+
+            <br>
+            <br>
+            <button class="btn" onclick="evenOdd()">even odd</button>
+            <br>
+            <br>
+            <button class="btn" onclick="eligibleorNot()">eligible or not</button>
+            <br>
+            <br>
+            <button class="btn" onclick="conditionCheck()">greater or less</button>
+            <br>
+           
+        </div>
+    </div>
+</body>
+
+</html>

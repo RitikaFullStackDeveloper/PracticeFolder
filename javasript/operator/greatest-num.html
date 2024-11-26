@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Evalution</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .box {
+            height: 70%;
+            width: 40%;
+            background-color: #ECDFCC;
+
+
+        }
+
+        #demo {
+            height: 20%;
+            width: 100%;
+            background-color: #3C3D37;
+            color: aliceblue;
+            text-align: center;
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input {
+            height: 6%;
+            width: 70%;
+            margin-left: 10%;
+        }
+
+        .btn {
+            height: 8%;
+            width: 20%;
+            border-radius: 12px;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function triangle() {
+            let a = document.getElementById("input-one").value;
+            let b = document.getElementById("input-two").value;
+            let c = document.getElementById("input-three").value;
+
+            if (b > a) {
+                alert("b is greater")
+                document.getElementById("demo").innerHTML = 'b is greater'
+            }
+            else if (c > b) {
+                alert("c is greater")
+                document.getElementById("demo").innerHTML = 'c is greater'
+            }
+            else {
+                alert("a is greater")
+                document.getElementById("demo").innerHTML = 'b is greater'
+            }
+        }
+
+    </script>
+    <div class="container">
+        <div class="box">
+            <div id="demo"></div>
+            <br>
+            <br>
+            <input type="number" class="input" id="input-one">
+            <br>
+            <br>
+            <input type="number" class="input" id="input-two">
+            <br>
+            <br>
+            <input type="number" class="input" id="input-three">
+            <br>
+            <br>
+
+            <br>
+            <br>
+            <button class="btn" onclick="triangle()">Check</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-layout</title>
+    <style>
+        /* main container */
+        .main-container {
+            height: 70vh;
+            width: 50vw;
+            background-color:#DBD3D3 ;
+            margin-left: 20%;
+            margin-top: 5%;
+        }
+        /* first-container */
+        .first-container{
+            height: 20%;
+            width: 100%;
+            background-color: #697565;
+        }
+        /* display */
+        #display{
+            width: 80%;
+            height: 40%;
+            margin-left: 10%;
+            margin-top: 5%;
+            text-align: center;
+        }
+        /* second container */
+        .second-container{
+            width: 80%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+        }
+        /* button.
+        . */
+        .button{
+            width: 30%;
+            height: 40%;
+            margin-left: 10%;
+            background-color: #3C3D37;
+            color: #ffff;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <script>
+        // parameter passs
+        function Add(a,b){
+            z = a + b;
+            document.getElementById("display").value = z
+        }
+        // substraction
+        function Sub(){
+            const x = 50;
+            const y = 100;
+            z = x - y;
+            document.getElementById("display").value = z
+        }
+    </script>
+
+
+    <!-- main-container -->
+    <div class="main-container">
+        <!-- first comntainer -->
+        <div class="first-container">
+            <input type="text" id="display" readonly>
+        </div>
+        <br>
+        <br>
+
+        <!-- second container -->
+        <div class="second-container">
+            <!-- function with parameter -->
+                <button class="button" onclick="Add(500,1000)">Addition</button>
+            <!-- function without parameter -->
+                 <button class="button" onclick="Sub()">Substract</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .display {
+            height: 10vh;
+            width: 20vw;
+            background-color: grey;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            display: block;
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .main-container {
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function buttonType() {
+            // input
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            // process
+            z = Number(x) + Number(y);
+            // output
+            document.getElementById("ayush").innerHTML = z;
+            console.log(z);
+            alert(z);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display" id="ayush"></div>
+        <br>
+        <input type="text" id="input-one">
+        <br>
+        <input type="text" id="input-two">
+        <br>
+        <button onclick="buttonType()">submit</button>
+    </div>
+</body>
+
+</html>

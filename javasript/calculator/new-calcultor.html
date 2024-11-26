@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .box {
+            height: 60%;
+            width: 30%;
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .display {
+            height: 60px;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: right;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+        .button {
+            height: 60px;
+            width: 23%;
+            margin: 5px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button.gray {
+            background-color: #B7B7B7;
+        }
+        .button.orange {
+            background-color: #FF9100;
+            color: white;
+        }
+        .button.dark {
+            background-color: #3C3D37;
+            color: white;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="box">
+            <!-- Display -->
+            <input type="text" id="display" class="display" disabled />
+            <!-- Calculator Buttons -->
+            <div class="row">
+                <button class="button gray" onclick="clearDisplay()">AC</button>
+                <button class="button gray">+/-</button>
+                <button class="button gray">%</button>
+                <button class="button orange" onclick="addOperator('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="button dark" onclick="numberType(7,10)">7</button>
+                <button class="button dark" onclick="numberType(8)">8</button>
+                <button class="button dark" onclick="numberType(9)">9</button>
+                <button class="button orange" onclick="addOperator('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="button dark" onclick="numberType(4)">4</button>
+                <button class="button dark" onclick="numberType(5)">5</button>
+                <button class="button dark" onclick="numberType(6)">6</button>
+                <button class="button orange" onclick="addOperator('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="button dark" onclick="numberType(1)">1</button>
+                <button class="button dark" onclick="numberType(2)">2</button>
+                <button class="button dark" onclick="numberType(3)">3</button>
+                <button class="button orange" onclick="addOperator('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="button dark" style="width: 48%" onclick="numberType(0)">0</button>
+                <button class="button dark" onclick="numberType('.')">.</button>
+                <button class="button orange" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+
+    // function without parameter
+     function simpleFunction(){
+        alert("welcome ")
+     }
+
+    //  function with parameter
+    function numberType(a,b){
+            z = a + b;
+            document.getElementById("display").value = z
+        }
+    //  function calling another function
+        function nnumberType(x) {
+            
+            document.getElementById('display').value = x + '    hello';
+            // recursion()
+            sayHello()
+            sayBye()
+            saycalculate()
+            simpleFunction()
+           callback()
+            Add(a,b)
+         
+          
+        }
+
+        // function return value
+        function saycalculate(){
+            x = 10;
+            y = 20;
+            z = x + y;
+            document.getElementById('display').value = z;
+            return z;
+        }
+        // recursion
+        function recursion(){
+            alert("recursion")
+            recursion()
+
+        }
+        // function recursion(){
+        //     r = 0;
+        //     if(r >3){
+        //         r++;
+        //         sayHello()
+        //     }
+        //    else{
+        //     sayBye()
+        //    }
+
+        function sayHello(){
+            alert("hello js")
+        }
+        function sayBye(){
+            alert("goodbye")
+        }
+
+        function callback(){
+            sayHello()
+            sayBye()
+        }
+      
+       
+        
+
+        // function numberType(number) {
+        //     currentInput += number;
+        //     document.getElementById('display').value = currentInput;
+        // }
+
+        // function addOperator(operator) {
+        //     currentInput += ' ' + operator + ' ';
+        //     document.getElementById('display').value = currentInput;
+        // }
+
+        // function clearDisplay() {
+        //     currentInput = '';
+        //     document.getElementById('display').value = '';
+        // }
+
+        // function calculate() {
+        //     try {
+        //         currentInput = eval(currentInput.replace(/x/g, '*'));
+        //         document.getElementById('display').value = currentInput;
+        //     } catch (error) {
+        //         document.getElementById('display').value = 'Error';
+        //     }
+        // }
+    </script>
+</body>
+</html>
