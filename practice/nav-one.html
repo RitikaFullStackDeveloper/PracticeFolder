@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        /* styling for body */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+
+        }
+         /* styling for nav */
+        nav {
+            width: 100%;
+            height: 20%;
+            font-size: 20px;
+
+        }
+          /* styling for ul */
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+          /* styling for navbar-two */
+        .navbar-two {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+        }
+           /* styling for logo div */
+        .one{
+            height: 100%;
+            width: 50%;
+            justify-content: flex-start;
+            
+        }
+        /* styling for logo  */
+        .header-logo{
+            font-size: 20px;
+            color: lightcoral;
+        }
+        /* styling for right div */
+        .two{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="main-container">
+        <!-- styling for navbar class -->
+        <nav class="navbar">
+            <!-- <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Service">Service</a></li>
+            </ul> -->
+        </nav>
+        <!-- header -->
+         <header>
+            <!-- styling for 2nd header navbar -->
+            <div class="navbar-two">
+                <!-- styling for log div -->
+                <div class="one">
+                     <div class="header-logo">Logo</div>
+                </div>
+                <!-- styling for second div -->
+                <div class="two">
+                    <div class="two-one">Home</div>
+                    <div class="two-one">About</div>
+                    <div class="two-one">Contact</div>
+                    <div class="two-one">Service</div>
+                </div>
+            </div>
+
+         </header>
+</body>
+
+</html>

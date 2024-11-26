@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightpink;
+        }
+
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the navbar */
+        .navbar{
+            position: absolute; /* Allows precise positioning */
+            top: 0; /* Aligns the navbar to the top of the page */
+            right: 0;   /*  Aligns the navbar to the right edge */
+           padding: 10px;    /*Adds space around the links */
+        }
+
+        /* Styling the list */
+        .navbar ul{
+            list-style: none; /* Removes bullet points */
+            display: flex;     /* Displays the list items in a row */
+        }
+
+        /* Styling the list items */
+        .navbar ul li{
+            margin-left: 20px;          /* Adds space between the items */
+        }
+        
+        /* Styling the links */
+        .navbar ul li a{
+           text-decoration: none;     /* Removes underline from the links */
+           color: black;            /* Sets the link text color */
+           font-weight: bold;                         /* Makes the link text bold */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Service">Service</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>
