@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media-query</title>
+    <style>
+        /* main-container */
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightcoral;
+
+
+
+        }
+
+        /* row-one */
+        .row-one {
+            height: 50%;
+            width: 100%;
+            background-color: rgb(169, 191, 214);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        /* box-1 */
+        .box-1 {
+            height: 90%;
+            width: 20%;
+            margin-top: 1%;
+            background-color: lightsalmon;
+
+        }
+
+
+        /* media query */
+        @media (max-width:576px) {
+            .main-container {
+                height: 100vh;
+                width: 100vw;
+                background-color: lightcoral;
+
+
+
+            }
+            /* row-one */
+            .row-one {
+                background-color: rgb(15, 27, 63);
+                font-size: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            /* box-1 */
+            .box-1 {
+                height: 50%;
+                width: 40%;
+                margin-top: 1%;
+                background-color: lightsalmon;
+
+            }
+        }
+        /* styling for media query */
+        @media (min-width:576px) and (max-width:768px) {
+
+            /* row-one */
+            .row-one {
+                background-color: rgb(25, 158, 71);
+                font-size: 25px;
+
+
+            }
+            /* box-1 */
+            .box-1 {
+                height: 50%;
+                width: 40%;
+                margin-top: 1%;
+                background-color: lightsalmon;
+
+            }
+        }
+        /* media quey */
+        @media (min-width:768px) and (max-width:992px) {
+            .row-one {
+                background-color: rgb(211, 40, 40);
+                font-size: 30px;
+            }
+
+            /* box-1 */
+            .box-1 {
+                height: 50%;
+                width: 40%;
+                margin-top: 1%;
+                background-color: lightsalmon;
+
+            }
+        }
+
+        /* media query */
+        @media (min-width:992px) and (max-width:1200px) {
+
+            /* row-one */
+            .row-one {
+                background-color: rgb(210, 207, 49);
+                font-size: 35px;
+            }
+            /* box-one */
+            .box-1 {
+                height: 50%;
+                width: 40%;
+                margin-top: 1%;
+                background-color: lightsalmon;
+
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0%;">
+    <!-- main-conatiner -->
+    <div class="main-container">
+        <!-- row-one -->
+        <div class="row-one">
+            <!-- box-1 -->
+                <div class="box-1">
+                    <p>Virat Kohli (Hindi pronunciation: [ʋɪˈɾɑːʈ ˈkoːɦli] ⓘ; born 5 November 1988) is an Indian
+                        international cricketer who plays Test and One Day International (ODI) cricket for the Indian
+                        national team.</p>
+                </div>
+                    <div class="box-1">
+                        <p>Mahendra Singh Dhoni (/məˈheɪndrə ˈsɪŋ dhæˈnɪ/ ⓘ; born 7 July 1981) is an Indian professional
+                        cricketer who plays as a right-handed batter and a wicketkeeper. </p>
+                </div>
+                    <div class="box-1">
+                        <p>Jasprit Jasbirsingh Bumrah (born 6 December 1993) is an Indian international cricketer who plays for
+                        the Indian cricket team in all formats of the game. A right-arm fast bowler with a unique bowling
+                        action, Bumrah is widely regarded as one of the best bowlers in the world and one of the greatest
+                        fast bowlers India has ever produced.[4] He plays for Gujarat in domestic cricket and for Mumbai
+                        Indians in the Indian Premier League (IPL). Bumrah was a member of the Indian team that won the 2024
+                        T20 World Cup, where he was named the player of the tournament.
+                    </p>
+                </div>
+                    <div class="box-1">Kannur Lokesh Rahul (/kənuːr loʊkeɪʃ ˌrɑːhʊl/; born 18 April 1992) is an Indian
+                        international cricketer who plays for the Indian national team. A right-handed wicket-keeper batter, his
+                        state team is Karnataka in domestic cricket and captains Lucknow Super Giants in the Indian Premier
+                        League. Rahul made his international debut in 2014 against Australia in the Boxing Day Test in
+                        Melbourne.</div>
+        </div>
+        <!-- row-two -->
+        <div class="row-two"></div>
+    </div>
+
+
+</body>
+
+</html>

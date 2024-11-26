@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media-query-3</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+        }
+
+        .left {
+            height: 70%;
+            width: 30%;
+
+        }
+
+        .right {
+            height: 70%;
+            width: 70%;
+
+        }
+
+        .one {
+            height: 90px;
+            width: 100%;
+            background-color: #BB9CC0;
+        }
+
+        .two {
+            height: 90px;
+            width: 100%;
+            background-color: #67729D;
+        }
+
+        .three {
+            height: 90px;
+            width: 100%;
+            background-color: #A25772;
+        }
+
+        @media(max-width:480px) {
+            body {
+                background-color: grey;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            .left {
+            height: 70%;
+            width: 100%;
+
+        }
+
+            .one {
+                height: 90px;
+                width: 100%;
+                background-color: #BB9CC0;
+            }
+
+            .two {
+                height: 90px;
+                width: 100%;
+                background-color: #67729D;
+            }
+
+            .three {
+                height: 90px;
+                width: 100%;
+                background-color: #A25772;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <div class="right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quis voluptatum iste iusto ab ducimus
+                nostrum iure magnam magni nemo doloremque possimus tempore aut nisi at, atque reprehenderit non quidem.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
