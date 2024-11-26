@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-ex</title>
+    <style>
+    body {
+        background-color: purple;
+        /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, purple, yellow);
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        height: 60%;
+        width: 40%;
+        background-color: #1E201E;
+
+    }
+
+    form {
+        margin-left: 10%;
+    }
+
+    .input-box {
+        width: 410px;
+    }
+
+    .button {
+        background-color: #C21292;
+        width: 90px;
+        height: 30px;
+        border-radius: 12px;
+        margin-left: 35%;
+    }
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div id="grade"></div>
+            <form>
+                <h1 style="text-align: center; color: #F5F5F7;">Contact Us</h1>
+                <!-- First Name -->
+                <label for="First Name" style="color: #F5F5F7;">First Name</label>
+                <input type="text" name="First Name">
+
+                <!-- Last Name Name -->
+                <label for="Last Name" style="color: #F5F5F7;">Last Name</label>
+                <input type="text" name="Last Name">
+                <br>
+                <br>
+                <br>
+                <!-- Email -->
+                <lable for="Email" style="color: #F5F5F7;">Email</lable>
+                <input type="email" id="Email" class="input-box" placeholder="Email" />
+                <br>
+                <br>
+                <div class="section">
+                    <p style="color: #F5F5F7;"> Leave us a few words</p>
+                    <textarea name="college name" id="college name"></textarea>
+                </div>
+                <br>
+                <br>
+                <button class="button">submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
