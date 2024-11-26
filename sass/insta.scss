@@ -1,0 +1,57 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #852250;
+    
+
+}
+
+
+
+.box {
+    height: 60%;
+    width: 30%;
+    background-color: white;
+}
+
+.input {
+    width: 60%;
+    height: 40px;
+    margin-left: 18%;
+
+}
+
+@mixin button ($primary,$secondary) {
+    width: 61%;
+    height: 30px;
+    margin-left: 18%;
+    background-color: $primary;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+        background-color: 
+        $secondary;
+    }
+}
+
+.button-btn {
+    @include button(rgb(72, 86, 212),yellow);
+    // font-size: 20px;
+    color: black;
+}
+
+.button-two {
+    @include button(red,green);
+    color: black;
+}
+
+
+.button-btn-child {
+    @extend .button-btn;
+    border: 1px solid black;
+}

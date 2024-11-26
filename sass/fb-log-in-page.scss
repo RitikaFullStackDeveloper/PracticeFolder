@@ -1,0 +1,50 @@
+// $background-color:skyblue;
+// $container-bg-color:white;
+
+
+.container{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+   
+}
+.box{
+    height:80% ;
+    width: 40%;
+    background-color: white;
+   text-align: center;
+  border: 1px solid black;
+   
+}
+@mixin import-text{
+    color:green;
+
+}
+@mixin button($bg-color,$text-color){
+    background-color: $bg-color;
+    color: $text-color;
+    curser:pointer;
+    
+    &:hover{
+        background-color: green;
+    }
+
+}
+.log-in-button{
+    @include button(blue, white)
+}
+.login-button{
+    @extend .log-in-button;
+    width: 100px;
+}
+.log-button{
+    @include button(orange, green)
+}
+// .log-in-button{
+//     background-color:pink;
+// }
+

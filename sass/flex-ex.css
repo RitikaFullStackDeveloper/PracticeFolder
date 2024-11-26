@@ -1,0 +1,110 @@
+/*  styling for main container */
+.main-container {
+  height: 80vh;
+  width: 80vw;
+  border: solid black;
+}
+
+/*  styling for row-one */
+.row-one {
+  height: 10%;
+  background-color: aqua;
+  margin: 3%;
+}
+
+/*  styling for row-two */
+.row-two {
+  height: 70%;
+  background-color: lightcoral;
+  margin: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/*  styling for box-one */
+.box-one {
+  background-color: lightgreen;
+  height: 70%;
+  width: 30%;
+  margin: 2%;
+}
+
+/*  styling for box-two */
+.box-two {
+  background-color: lightgoldenrodyellow;
+  height: 70%;
+  width: 30%;
+  margin: 5%;
+  display: flex;
+}
+
+/*  styling for column-one */
+.column-one {
+  height: 100%;
+  width: 50%;
+  background-color: rgb(51, 157, 45);
+  display: flex;
+  flex-direction: column;
+}
+
+/*  styling for column-one-box-one */
+.column-one-box-one {
+  height: 25%;
+  width: 80%;
+  margin: 7%;
+  background-color: white;
+}
+
+/*  styling for column-one-box-two */
+.column-one-box-two {
+  height: 25%;
+  width: 80%;
+  margin: 7%;
+  background-color: white;
+}
+
+/*  styling for column-one-box-three */
+.column-one-box-three {
+  height: 25%;
+  width: 80%;
+  margin: 7%;
+  background-color: white;
+}
+
+/*  styling column-two */
+.column-two {
+  height: 100%;
+  width: 50%;
+  background-color: rgb(51, 157, 45);
+  display: flex;
+  flex-direction: column;
+}
+
+/* styling for column-two-box-one */
+.column-two-box-one {
+  height: 25%;
+  width: 80%;
+  margin: 7%;
+  background-color: white;
+}
+
+/* styling for column-two-box-two */
+.column-two-box-two {
+  height: 25%;
+  width: 80%;
+  margin: 7%;
+  background-color: white;
+}
+
+/* styling for column-two-box-three */
+.column-two-box-three {
+  height: 25%;
+  width: 80%;
+  margin: 7%;
+  background-color: white;
+}
+
+/*# sourceMappingURL=flex-ex.css.map */

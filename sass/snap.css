@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 235, 71);
+}
+
+.box {
+  height: 60%;
+  width: 30%;
+  background-color: white;
+}
+
+.input {
+  width: 60%;
+  height: 40px;
+  margin-left: 18%;
+}
+
+.button-one, .button-child {
+  width: 61%;
+  height: 30px;
+  margin-left: 18%;
+  background-color: skyblue;
+  border-radius: 12px;
+  color: black;
+}
+.button-one:hover, .button-child:hover {
+  background-color: #FF9EAA;
+}
+
+.button-two {
+  width: 61%;
+  height: 30px;
+  margin-left: 18%;
+  background-color: #8E3E63;
+  border-radius: 12px;
+  color: black;
+}
+.button-two:hover {
+  background-color: #D2649A;
+}
+
+.button-child {
+  border: 15px black;
+}
+
+/*# sourceMappingURL=snap.css.map */

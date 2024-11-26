@@ -1,0 +1,36 @@
+
+$orange:  orange;  
+$white:  white; 
+$green: green; 
+
+
+
+
+.main {
+    height: 30vh;
+    width: 30vw;
+    margin-left: 30%;
+    margin-top: 10%;
+    border-style: groove;
+
+}
+
+.orange {
+    background-color: orange;
+    height: 10vh;
+}
+
+/* styling for white  */
+.white {
+    background-color: white;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+ /* styling for green  */
+.green {
+    background-color: green;
+    height: 10vh;
+}

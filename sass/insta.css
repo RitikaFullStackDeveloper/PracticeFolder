@@ -1,0 +1,60 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, black, #0C1844);
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100vw;
+}
+
+.box {
+  height: 60%;
+  width: 30%;
+  background-color: white;
+}
+
+.input {
+  width: 60%;
+  height: 40px;
+  margin-left: 18%;
+}
+
+.button-btn, .button-btn-child {
+  width: 61%;
+  height: 30px;
+  margin-left: 18%;
+  background-color: rgb(72, 86, 212);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+.button-btn:hover, .button-btn-child:hover {
+  background-color: yellow;
+}
+
+.button-two {
+  width: 61%;
+  height: 30px;
+  margin-left: 18%;
+  background-color: red;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+.button-two:hover {
+  background-color: green;
+}
+
+.button-btn-child {
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=insta.css.map */
