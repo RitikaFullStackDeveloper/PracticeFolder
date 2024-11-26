@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(to bottom right, black, #0C1844);
+
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: 100vw;
+        }
+
+        .first-row {
+            height: 90vh;
+            width: 100%;
+            /* background-color: lightgrey; */
+        }
+
+        /* styling for ul */
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* styling for right div */
+        .two {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-between; */
+            font-size: 30px;
+            color: #ffff;
+            margin-left: 20%;
+            gap: 15%;
+
+        }
+
+        /* for home section */
+        .name {
+            color: #ffff;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        .first-row-two {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .button {
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .img {
+            margin: 10%;
+        }
+
+        /* second-row  */
+        .second-row {
+            height: 100vh;
+            color: #ffff;
+            /* background-color: lightcoral; */
+
+        }
+
+        /* second row text */
+        .second-row-text {
+            margin-left: 15%;
+            margin-right: 10%;
+
+        }
+
+        /* for skills */
+        * {
+            box-sizing: border-box
+        }
+
+        .skill-div {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .skills {
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+        /* html skill range */
+        .html {
+            width: 90%;
+            background-color: #686D76;
+        }
+
+        /* css skill range */
+        .css {
+            width: 85%;
+            background-color: #686D76;
+        }
+
+        /* sql skill range */
+        .sql {
+            width: 80%;
+            background-color: #686D76;
+        }
+
+        /* JAVA Script skill range */
+        .javascript {
+            width: 20%;
+            background-color: #686D76;
+        }
+
+        /* second-row-end */
+
+
+        /* third-row-start */
+        .third-row {
+            height: 90vh;
+            color: #ffff;
+        }
+
+        /* cards */
+        .project-row-one {
+            height: 40%;
+            width: 77%;
+            margin-left: 13%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+        }
+
+        /* first- card */
+        .html-card {
+            height: 100%;
+            width: 30%;
+
+
+        }
+
+        /* second-card */
+        .css-card {
+            height: 100%;
+            width: 30%;
+
+        }
+
+        /*project-row-two */
+        .project-row-two {
+            height: 40%;
+            width: 77%;
+            margin-left: 13%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+        }
+
+        /* first- card */
+        .bootrap-card {
+            height: 100%;
+            width: 30%;
+
+
+        }
+
+        /* second-card */
+        .javascript-card {
+            height: 100%;
+            width: 30%;
+
+        }
+
+        /* third-row end */
+
+        /* fourth row */
+        .fourth-row {
+            height: 70vh;
+            color: #ffff;
+            margin-left: 15%;
+            margin-right: 10%;
+
+        }
+
+        /* media query */
+        /* Base styles for large screens (desktops) */
+
+        /* Media Queries */
+
+        /* Small screens (phones) */
+        @media (max-width: 480px) {
+            .two {
+                margin-left: 0;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                font-size: 20px;
+            }
+
+            .first-row-two {
+                flex-direction: column;
+                margin-top: 5%;
+            }
+
+            .img {
+                margin: 5%;
+                width: 10%;
+                height: 10%;
+            }
+
+            .second-row {
+                padding: 10px;
+            }
+            .second-row-text{
+                margin-top: 70%;
+            }
+
+            .third-row{
+                margin-top: 50%;
+                margin-left: 0%;
+            }
+            .project-row-one
+            {
+              
+                flex-direction: column;
+                width: 100%;
+                margin-left: 2%;
+                margin-bottom: 1%;
+                gap: 90%;
+               
+            }
+
+            .fourth-row {
+           margin-top: 90%;
+               
+            }
+        }
+
+        /* Medium screens (tablets) */
+      
+        @media (min-width: 768px) and (max-width: 1023px) {
+           
+            .two {
+                margin-left: 1%;
+                gap: 8%;
+            }
+
+            .first-row-two {
+                flex-direction: column;
+                margin-top: 5%;
+            }
+
+            .img {
+                width: 40%;
+            }
+
+            .second-row-text {
+                margin-top: 43%;
+            }
+
+            .html-card, .css-card, .bootrap-card, .javascript-card {
+                width: 20%;
+            }
+
+            .project-row-one {
+                width: 90%;
+                margin-left: 0%;
+                gap: 0%;
+            }
+
+            .fourth-row {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        }
+
+
+        /* Large screens (desktops) */
+        @media (min-width: 1024px) {
+            .two {
+                margin-left: 39%;
+            }
+
+            .first-row-two {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .img {
+                width: 500px;
+            }
+
+            .project-row-one {
+                width: 77%;
+                margin-left: 13%;
+                justify-content: space-around;
+            }
+
+            .fourth-row {
+                margin-left: 15%;
+                margin-right: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="grade"></div>
+        <div class="first-row">
+            <!-- header -->
+            <header>
+
+                <!-- styling for second div -->
+                <div class="two">
+                    <th><a href="#home" style="color: #ddd;">HOME</th></a>
+                    <th><a href="#about" style="color: #ddd;">ABOUT</th></a>
+                    <th><a href="#projects" style="color: #ddd;">PROJECTS</th></a>
+                    <th><a href="#contact" style="color: #ddd;">CONTACT</th></a>
+                </div>
+            </header>
+
+
+
+            <!--name section -->
+            <div class="first-row-two" id="home">
+                <div class="name">
+                    <h1>Hello, I am Ritika Gaidhane</h1>
+                    <h3>Full-Stack Developer</h3>
+                    <br>
+                    <br>
+
+                    <a href="../resume/resume-two.html"> <button class="button">Download CV</button></a>
+                    </a>
+                </div>
+
+                <div class="img">
+                    <img src="../assets/image/girl-developr-portfoio.png" alt="" height="500" width="500">
+                </div>
+            </div>
+
+        </div>
+        <!-- home end -->
+        <!-- about section -->
+        <div class="second-row" id="about">
+            <div class="second-row-text">
+                <h1>About Me</h1>
+                <hr style="margin-right: 80%;">
+                <p>Full Stack Developer with expertise in web and mobile development, including iOS. Skilled in
+                    JavaScript, React, Node.js, and Python, with experience in both front-end and back-end
+                    technologies.
+                    Strong problem solver with a focus on building efficient and user-friendly solutions.</p>
+
+                <br>
+                <br>
+                <h2>My Skills</h2>
+
+                <p>HTML</p>
+                <div class="skill-div">
+                    <div class="skills html"></div>
+                </div>
+
+                <p>CSS</p>
+                <div class="skill-div">
+                    <div class="skills css"></div>
+                </div>
+
+                <p>SQL</p>
+                <div class="skill-div">
+                    <div class="skills sql"></div>
+                </div>
+
+
+                <p>JAVA Script</p>
+                <div class="skill-div">
+                    <div class="skills javascript"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- about end -->
+        <!-- project section -->
+        <div class="third-row" id="projects">
+            <h1 style="margin-left: 15%;">Projects</h1>
+            <hr style="margin-right: 70%; margin-left: 15%;">
+            <br>
+            <br>
+            <!-- row-one -->
+            <div class="project-row-one">
+                <!-- html card -->
+
+                <div class="html-card">
+                    <a href="../portfolio/html-project.html">
+                        <img src="../assets/image/html-portfolio.jpeg" height="250" width="360">
+                    </a>
+                </div>
+
+                <!-- css card -->
+                <div class="css-card">
+                    <a href="../portfolio/css-project.html">
+                        <img src="../assets/image/css-portfolio.avif" height="250" width="360">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <!-- row-one -->
+            <div class="project-row-one">
+                <!-- Bootstrap card -->
+                <div class="bootrap-card">
+                    <a href="../Bootstrap/website.html">
+                        <img src="../assets/image/bootsrap-portfolio.jpg" height="250" width="360">
+                    </a>
+                </div>
+                <!-- java script card -->
+                <div class="javascript-card">
+                    <div class="html-card">
+                        <a href="../flex/calculator.html">
+                            <img src="../assets/image/javascript-portfolio.avif" height="250" width="360">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- fourth row -->
+        <div class="fourth-row" id="contact">
+            <h1>Contact Me</h1>
+            <hr style="margin-right: 80%;">
+            <br>
+            <br>
+            <div class="contact">
+                <h3> <img src="../assets/image/phone-portfolio.png" height="40" width="50">Phone: +91********49</h3>
+                <h3> <img src="../assets/image/email-portfolio.png" height="40" width="50">Email: charperitika@gmail.com
+                </h3>
+                <h3> <img src="../assets/image/github-logo.png" height="40" width="50"><a href="https://github.com/">  github</a> </h3>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
