@@ -8,6 +8,7 @@ const Fruits=()=>{
                    <li>{item}</li> 
                 ))}
             </ul>
+          
         </div>
     )
 }

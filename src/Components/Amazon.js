@@ -44,7 +44,7 @@ export default class Amazon extends React.Component {
                 <div className="cart-container">
                     <img src="https://www.pngmart.com/files/23/Amazon-Logo-White-PNG-Image.png" style={{ height: "50px", width: "180px" }}></img>
                     <div className="search-container">
-                        <button type="text">Search</button>
+                        <button className="button">Search</button>
                     </div>
                     <img src={"amazon-cart.png"} className="cart-logo" style={{ height: "60px", width: "100px", marginBottom: "10px" }} /> <text style={{ color: "white" }}> {this.state.counter}</text>
                 </div>
