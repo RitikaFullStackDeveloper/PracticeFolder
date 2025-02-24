@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            /* margin: 20px; */
+        }
+        #counter {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 20px;
+            padding: 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .increase { 
+            background: green; 
+            color: white; 
+        }
+        .decrease {
+             background: red; 
+             color: white; 
+            }
+        .reset { 
+            background: gray; 
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+
+    <h2>Simple Counter</h2>
+    <p id="counter">0</p>
+    <button class="increase" onclick="increase()">+</button>
+    <button class="decrease" onclick="decrease()">-</button>
+    <button class="reset" onclick="reset()">Reset</button>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById("counter");
+
+        function increase() {
+            count++;
+            counterElement.textContent = count;
+        }
+
+        function decrease() {
+            count--;
+            counterElement.textContent = count;
+        }
+
+        function reset() {
+            count = 0;
+            counterElement.textContent = count;
+        }
+    </script>
+</div>
+</body>
+</html>

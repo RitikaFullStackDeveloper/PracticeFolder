@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!-- Linking External CSS -->
+  <link rel="stylesheet" href="index.css">
+
+
+
+
+</head>
+
+<body>
+  <script>
+    // Titles to display
+    // const titles = ["Freelance Web Designer", "Web Developer", "UI/UX Specialist"];
+    let index = 0;
+
+    // Function to change the title
+    function changeTitle() {
+      const textElement = document.getElementById("changing-text");
+      textElement.textContent = titles[index];
+      index = (index + 1) % titles.length; // Cycle through the titles
+    }
+
+    // Change the title every 3 seconds
+    setInterval(changeTitle, 3000);
+
+  </script>
+
+  <!-- navbar -->
+  <nav>
+    <div class="logo"></div>
+    <ul>
+      <li><a href="#"></a>Home</li>
+      <li><a href="#"></a>About</li>
+      <li><a href="#"></a>Project</li>
+      <li><a href="#"></a>Contact</li>
+
+    </ul>
+  </nav>
+
+  <!-- hero  -->
+  <div class="name-container">
+    <div class="name">
+      <!-- <h1>I'm <span>Ritika Gaidhane</span></h1>
+                <p>A Full-Stack Developer</p> -->
+
+
+
+      <div class="hero-text">
+        <p class="greeting">HELLO!</p>
+        <h1>I'm <span>Ritika Gaidhane</span></h1>
+        <p class="subheading">
+          A <span id="changing-text">Full-Stack Developer </span>
+        </p>
+
+
+        <!-- resume button -->
+        <button class="btn">Resume</button>
+
+      </div>
+      <!-- <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt="">
+      </div> -->
+    </div>
+
+  </div>
+  <div class="second-row" id="about">
+          <div class="About">
+
+                <h1 style="margin-left: 40%; ">About Me</h1>
+                <hr style="margin-right: 47%; margin-left: 39%;">
+                <br>
+                <br>
+                <p>Full Stack Developer with expertise in web and mobile development, including iOS. Skilled in
+                  JavaScript, React, Node.js, and Python, with experience in both front-end and back-end
+                  technologies.
+                  Strong problem solver with a focus on building efficient and user-friendly solutions.</p>
+
+                <br>
+                <br>
+          </div>
+
+
+      <div class="skill">
+              <p>HTML</p>
+              <div class="skill-div">
+                <div class="skills html"></div>
+              </div>
+
+              <p>CSS</p>
+              <div class="skill-div">
+                <div class="skills css"></div>
+              </div>
+
+              <p>SQL</p>
+              <div class="skill-div">
+                <div class="skills sql"></div>
+              </div>
+
+
+              <p>JAVA Script</p>
+              <div class="skill-div">
+                <div class="skills javascript">
+              </div>
+      </div>
+  </div>
+
+  
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Project Section -->
+    <div class="third-row" id="projects">
+      <h1 style="margin-left: 40%;">Projects</h1>
+      <hr style="margin-right: 46%; margin-left: 39%;">
+      <br><br>
+      <!-- Row One -->
+      <div class="project-row-one" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <!-- HTML Card -->
+        <div class="html-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+          <a href="../portfolio/html-project.html">
+            <!-- <img src="../assets/image/html-portfolio.jpeg" height="250" width="105%" alt="HTML Project"> -->
+          </a>
+        </div>
+        <!-- CSS Card -->
+        <div class="css-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+          <a href="../portfolio/css-project.html">
+            <!-- <img src="../assets/image/css-portfolio.avif" height="250" width="105%" alt="CSS Project"> -->
+          </a>
+        </div>
+        <div class="nodejs-card">
+          <a href="../portfolio/nodejs-project.html">
+            <!-- <img src="../assets/image/nodejs-portfolio.jpg" height="250" width="250" alt="Node.js Project"> -->
+          </a>
+        </div>
+      </div>
+      <br>
+      <!-- Row Two -->
+      <div class="project-row-one" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <!-- Bootstrap Card -->
+        <div class="bootstrap-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+          <a href="../Bootstrap/website.html">
+            <!-- <img src="../assets/image/bootsrap-portfolio.jpg" height="250" width="105%" alt="Bootstrap Project"> -->
+          </a>
+        </div>
+        <!-- JavaScript Card -->
+        <div class="javascript-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+          <a href="../flex/calculator.html">
+            <!-- <img src="../assets/image/javascript-portfolio.avif" height="250" width="105%" alt="JavaScript Project"> -->
+          </a>
+        </div>
+        <!-- react Project Cards -->
+        <div class="react-card">
+          <a href="../Portfolio-Two/test-case.html">
+            <!-- <img src="../assets/image/react-portfolio.jpg" height="250" width="250" alt="React Project"> -->
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <!-- Contact Section -->
+  <div class="fourth-row" id="contact">
+    <h1 style="text-align: center;">Contact Me</h1>
+    <hr style="margin-right: 40%; margin-left:40%;">
+
+
+    <div class="contact">
+      <!-- Phone -->
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="">
+        </div>
+        <p>Phone: +91********49</p>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="">
+        </div>
+        <p>Email: mailto:charperitika@gmail.com</p>
+      </div>
+
+      <!-- Linked in
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="" >
+        </div>
+        <p>Linked in</p>
+      </div> -->
+
+      <!-- GitHub -->
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="">
+        </div>
+        <p><a href="" target="_blank" class="contact-link">GitHub</a></p>
+      </div>
+      <!-- Linked in -->
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="">
+        </div>
+        <p>Linked in</p>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- jkuhkuhdfk -->
+
+
+
+   Project Section
+  <div class="third-row" id="projects">
+    <h1 style="margin-left: 40%;">Projects</h1>
+    <hr style="margin-right: 46%; margin-left: 39%;">
+    <br><br>
+    <!-- Row One -->
+    <div class="project-row-one" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <!-- HTML Card -->
+      <div class="html-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+        <a href="../Portfolio-Two/project-html.html">
+          <img src="../assets/image/html-portfolio.jpeg" height="250" width="105%" alt="HTML Project">
+        </a>
+      </div>
+      <!-- CSS Card -->
+      <div class="css-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+        <a href="../portfolio/css-project.html">
+          <!-- <img src="../assets/image/css-portfolio.avif" height="250" width="105%" alt="CSS Project"> -->
+        </a>
+      </div>
+      <div class="nodejs-card">
+        <a href="../portfolio/nodejs-project.html">
+          <!-- <img src="../assets/image/nodejs-portfolio.jpg" height="250" width="250" alt="Node.js Project"> -->
+        </a>
+      </div>
+    </div>
+    <br>
+    <!-- Row Two -->
+    <div class="project-row-one" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <!-- Bootstrap Card -->
+      <div class="bootstrap-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+        <a href="../Bootstrap/website.html">
+          <!-- <img src="../assets/image/bootsrap-portfolio.jpg" height="250" width="105%" alt="Bootstrap Project"> -->
+        </a>
+      </div>
+      <!-- JavaScript Card -->
+      <div class="javascript-card" style="flex: 1 1 45%; margin-bottom: 20px;">
+        <a href="../flex/calculator.html">
+          <!-- <img src="../assets/image/javascript-portfolio.avif" height="250" width="105%" alt="JavaScript Project"> -->
+        </a>
+      </div>
+      <!-- react Project Cards -->
+      <div class="react-card">
+        <a href="../Portfolio-Two/test-case.html">
+          <!-- <img src="../assets/image/react-portfolio.jpg" height="250" width="250" alt="React Project"> -->
+        </a>
+      </div>
+    </div>
+
+
+
+    <!-- demo -->
+
+
+    <div class="name-container">
+      <div class="name" id="home">
+        <!-- <h1>I'm <span>Ritika Gaidhane</span></h1>
+                  <p>A Full-Stack Developer</p> -->
+  
+  
+        <!-- left side -->
+        <div class="hero-text">
+          <p class="greeting">HELLO!</p>
+          <h1>I'm <span>Ritika Gaidhane</span></h1>
+          <p class="subheading">
+            A <span id="changing-text">Full-Stack Developer </span>
+          </p>
+  
+  
+          <!-- resume button -->
+          <button class="btn">Resume</button>
+  
+        </div>
+        <!-- <div class="image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt="">
+        </div> -->
+        <!-- right section -->
+        
+      </div>
+      <div class="right-section "></div>
+  
+    </div>
+
+</body>
+
+</html>
