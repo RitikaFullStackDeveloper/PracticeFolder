@@ -1,0 +1,19 @@
+.div{
+    height: 60vh;
+    width: 40vw;
+    background-color: #373A40;
+    color: white;
+    margin-left: 30%;
+}
+.button{
+    height: 30px;
+    width: 50%;
+}
+.button:hover {
+    background-color: #45a049;
+  }
+input{
+    width: 50%;
+    height: 30px;
+}
+

@@ -1,0 +1,49 @@
+/* .table{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+   
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+   
+}
+.cell-button{
+    width: 40px;
+    height: 30px;
+    background-color:rgb(119, 193, 89);
+   
+}
+.mult{
+    font-size: 15px;
+    columns: white;
+
+} */
+
+.table{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    columns: 50vw;
+    background-color:#ccc;
+}
+.row{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+.cell-button{
+    height:5vh;
+    width:5vw;
+}
+.multi{
+    font-size:20px;
+    
+} 

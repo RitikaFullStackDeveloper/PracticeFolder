@@ -1,0 +1,18 @@
+.button{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-left: 40%;
+    gap: 10%;
+   
+}
+
+.div{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    height: 200px;
+    width: 100px;
+    margin-left: 42%;
+}

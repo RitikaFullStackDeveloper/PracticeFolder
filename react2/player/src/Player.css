@@ -1,0 +1,138 @@
+/* .player-button{
+    width: 30vw;
+    height:44px;
+    border-width: 3px;
+    border-color:gray;
+} */
+.container{
+    height: 100vh;
+    background-image: url('https://t4.ftcdn.net/jpg/06/15/06/81/360_F_615068142_3siXSo1TWv7ebrf7OR0XdHurjzkcpJE3.jpg');
+    background-size: cover;
+    padding: 1%;
+  
+}
+/* .team{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+} */
+ .team{
+    width:50%;
+    height: 90vh;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+
+
+ } 
+/* .playersOne{
+    height: 90vh;
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid white;
+  
+} */
+/* img{
+    height: 50px;
+    width: 50px;
+    justify-content: space-around;
+    margin-top: 20%;
+   
+} */
+
+/* .box1{
+    display: flex;
+    flex-direction: row;
+}
+.players{
+    display: flex;
+    flex-direction: row;
+} */
+
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .box1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .team {
+    flex: 1;
+    padding: 15px;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+ 
+  
+  .players {
+    display: flex;
+    flex-wrap: wrap; /* Ensures players are in a single row */
+    overflow-x: auto; /* Adds horizontal scroll for overflow */
+    gap: 15px;
+    padding: 10px 0;
+  }
+  
+  .player-card {
+    flex-shrink: 0; /* Prevents the cards from shrinking */
+    width: 120px;
+    text-align: center;
+  }
+  
+  .player-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+  
+  .player-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .player-button {
+    background-color: #007bff;
+  
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  
+  .player-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add scroll styling for players row */
+  .players::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .players::-webkit-scrollbar-thumb {
+ 
+    border-radius: 4px;
+  }
+  
+ 
+  
