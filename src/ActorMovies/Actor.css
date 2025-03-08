@@ -1,0 +1,123 @@
+ /* .container{
+    background-image: url('https://img.pikbest.com/backgrounds/20200530/black-and-gold-background-abstract-geometric-shapes-luxury-design-wallpaper-realistic-v_1773569jpg!w700wp');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+    color: aliceblue;
+    
+ }
+ img{
+    width: 100px;
+    height: 150px;
+    margin-top: 50%;
+  
+ } */
+
+ /* .container {
+    background-image: url('https://img.pikbest.com/backgrounds/20200530/black-and-gold-background-abstract-geometric-shapes-luxury-design-wallpaper-realistic-v_1773569jpg!w700wp');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    align-items: flex-start; 
+    padding: 20px; 
+    height: 100vh; 
+    color: aliceblue;
+    box-sizing: border-box; 
+  }   */
+/*   
+  img {
+    width: 100px;
+    height: 150px;
+    margin-top: 20px; 
+    border-radius: 8px; 
+    object-fit: cover; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+   .actors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+
+  h1 {
+    width: 100%; 
+    text-align: center;
+    color: aliceblue;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    margin-bottom: 20px; 
+  } */
+  
+
+  .container {
+    background-image: url('https://img.pikbest.com/backgrounds/20200530/black-and-gold-background-abstract-geometric-shapes-luxury-design-wallpaper-realistic-v_1773569jpg!w700wp');    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    color: aliceblue;
+}
+
+.actors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.actor-card {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.actor-card:hover {
+    transform: scale(1.1);
+}
+
+.actor-image {
+    width: 120px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.actor-name {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .actors-grid {
+      grid-template-columns: repeat(5, 1fr); /* 5 actors per row for tablets */
+      width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .actors-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .actors-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 actor per row on mobile */
+  }
+}
+

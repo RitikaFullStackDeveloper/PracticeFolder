@@ -1,0 +1,29 @@
+/* .main-container{
+    height: 90%;
+    width: 100%;
+    background-color:white;
+}
+.heading{
+    color: black;
+ text-align: center;
+} */
+
+
+.heading{   
+    color: rgb(55, 208, 20);
+   text-align: center;
+   
+   }
+    
+   .product-container {
+       width: 90%;
+       margin-left: 45px;
+       display: grid;
+       /* / grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); / */
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       gap: 25px;
+       justify-items: center;
+       background-color:#4C7B8B;
+       padding: 20px;
+       border-radius: 5px;
+       }
