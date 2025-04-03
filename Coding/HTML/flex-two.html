@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin: 0%;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: antiquewhite;
+        }
+        .row-one{
+            height: 10%;
+            width: 100%;
+            background-color: aquamarine;
+        }
+        .row-two{
+            height: 40%;
+            width: 100%;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: row;
+        }
+        .row-two-left{
+            height: 100%;
+            width: 50%;
+            background-color: black;
+        }
+        .row-two-right{
+            height: 100%;
+            width: 50%;
+            background-color: rgb(124, 78, 9);
+        }
+        .row-two-right-inner{
+            height: 80%;
+            width:50% ;
+          margin-left: 30%;
+          margin-top: 5%;
+            background-color: brown;
+        }
+        .row-three{
+            height: 40%;
+            width: 100%;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: row;
+        }
+        .row-three-left{
+            height: 100%;
+            width: 50%;
+            background-color: rgb(124, 78, 9);
+        }
+        .row-three-right{
+            height: 100%;
+            width: 50%;
+            background-color: black;
+        }
+        .row-three-left-inner{
+            height: 80%;
+            width:50% ;
+          margin-left: 30%;
+          margin-top: 5%;
+            background-color: brown;
+        }
+        .row-four{
+            height: 10%;
+            width: 100%;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row-one"></div>
+       <div class="row-two">
+            <div class="row-two-left"></div>
+            <div class="row-two-right">
+                <div class="row-two-right-inner"></div>
+            </div>
+       </div>
+       <div class="row-three">
+            <div class="row-three-left">
+                <div class="row-three-left-inner"></div>
+            </div>
+            <div class="row-three-right"></div>
+       </div>
+       <div class="row-four"></div>
+    </div>
+</body>
+</html>
