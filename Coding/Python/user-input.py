@@ -1,3 +1,5 @@
+ls -l *.py
+
 # # Taking input from the user
 # firstname = input("Enter your first name: ")
 # lastname = input("Enter your last name: ")
