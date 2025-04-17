@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Showcase UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-light: #f8f9fa;
+      --editor-bg-light: #ffffff;
+      --editor-bg-dark: #2d2d2d;
+      --output-bg: #121212;
+      --text-light: #333;
+      --highlight: #007acc;
+      --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: 0.3s ease-in-out;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: var(--text-light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .editor {
+      background: var(--editor-bg-light);
+      font-family: 'Fira Code', monospace;
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+    }
+
+    .output {
+      background: var(--output-bg);
+      color: #39ff14;
+      font-family: 'Fira Code', monospace;
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+    }
+
+    .code {
+      background: var(--editor-bg-light);
+      font-family: 'Fira Code', monospace;
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      white-space: pre-wrap;
+    }
+
+    input[type="number"] {
+      padding: 12px 16px;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      font-size: 16px;
+      width: 100%;
+      max-width: 320px;
+      transition: var(--transition);
+    }
+
+    input[type="number"]:focus {
+      border-color: var(--highlight);
+      box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.2);
+      outline: none;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #444;
+      margin: 0;
+      font-style: italic;
+    }
+
+    button {
+      padding: 10px 22px;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #1e40af;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .panel {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="panel">
+
+      <!-- Input Area -->
+      <div class="editor">
+        <input type="number" id="demo" placeholder="Enter first number">
+        <p class="note">note: second input from prompt</p>
+        <p class="note">note: 200 value is already assign</p>
+        <button onclick="submitBtn()">Submit</button>
+      </div>
+
+      <!-- JavaScript Code Preview -->
+      <div class="code">
+<code>
+function submitBtn() {
+  let a = parseFloat(document.getElementById("demo").value);
+  let b = parseFloat(prompt("Enter second number", 200));
+  let c = a + b;
+  alert("The result is: " + c);
+  document.getElementById("result").innerHTML = c;
+}
+</code>
+      </div>
+
+      <!-- Output Display -->
+      <div class="output">
+        <h1 id="result">Result will appear here</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function submitBtn() {
+      let a = parseFloat(document.getElementById("demo").value);
+      let b = parseFloat(prompt("Enter second number", 200));
+      let c = a + b;
+      alert("The result is: " + c);
+      document.getElementById("result").innerHTML = c;
+    }
+  </script>
+</body>
+</html>

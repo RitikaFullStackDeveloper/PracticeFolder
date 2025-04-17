@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-light: #f8f9fa;
+        --text-light: #333;
+        --highlight: #007acc;
+        --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        --radius: 12px;
+        --transition: 0.3s ease-in-out;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+        color: var(--text-light);
+        transition: var(--transition);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+
+      .header{
+        height: 13vh;
+        width: 100%;
+        padding: 15px;
+        row-gap: 9%;
+        background-color: #80e3ffe2;
+ 
+      }
+      .tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .tab {
+        background: #e0e0e0;
+        padding: 12px 24px;
+        border-radius: var(--radius);
+        cursor: pointer;
+        transition: var(--transition);
+        font-weight: 600;
+        box-shadow: var(--shadow);
+      }
+
+      .tab:hover {
+        background: #ccc;
+      }
+
+      .tab.active {
+        background: var(--highlight);
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      .panel {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        transition: var(--transition);
+      }
+
+      .panel.active {
+        display: flex;
+      }
+
+      .editor,
+      .output {
+        padding: 20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        min-height: 200px;
+        overflow-x: auto;
+        font-size: 14px;
+        line-height: 1.6;
+        font-family: "Fira Code", monospace;
+      }
+
+      .editor {
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .output {
+        background: #121212;
+        color: #39ff14;
+      }
+
+      .editor input[type="number"] {
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 16px;
+        max-width: 300px;
+      }
+
+      .editor input[type="number"]:focus {
+        border-color: var(--highlight);
+        box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.2);
+        outline: none;
+      }
+
+      .editor button {
+        padding: 10px 18px;
+        background-color: var(--highlight);
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        font-size: 16px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .editor button:hover {
+        background-color: #005f99;
+      }
+
+      .editor .note {
+        font-size: 14px;
+        color: #666;
+        font-style: italic;
+        margin: 0;
+      }
+
+      @media (min-width: 768px) {
+        .panel {
+          flex-direction: row;
+        }
+
+        .editor,
+        .output {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+      <h1 >Input/Output in Programming Languages</h1>
+    </div>
+      <div class="tabs">
+        <div class="tab active" onclick="showPanel(0)">JavaScript</div>
+        <div class="tab" onclick="showPanel(1)">C</div>
+        <div class="tab" onclick="showPanel(2)">Swift</div>
+        <div class="tab" onclick="showPanel(3)">Java</div>
+        <div class="tab" onclick="showPanel(4)">Python</div>
+      </div>
+
+      <!-- JavaScript Panel -->
+      <section class="panel active">
+        <div class="editor">
+          <input type="number" id="demo" placeholder="Enter first number" />
+          <p class="note">note: second input from prompt</p>
+          <p class="note">note: 200 value is already assign</p>
+          <button onclick="submitBtn()">Submit</button>
+        </div>
+
+        <div class="editor">
+          <code>
+            function submitBtn() { let a =
+            parseFloat(document.getElementById("demo").value); let b =
+            parseFloat(prompt("Enter your second number", 200)); let c = a + b;
+            alert("The result is: " + c);
+            document.getElementById("result").innerHTML = c; }
+          </code>
+        </div>
+
+        <div class="output">
+          <h1 id="result" style="font-size: small">Result will appear here</h1>
+        </div>
+      </section>
+
+      <!-- C Panel -->
+      <section class="panel">
+      
+        <div class="editor">
+          <pre>
+ // Direct Assign
+#include &lt;stdio.h&gt;
+int main() {
+  int number = 15;  
+  if (number % 2 == 0)
+      printf("%d is Even\n", number);
+  else
+      printf("%d is Odd\n", number);
+  return 0;
+}
+</pre>
+
+<pre>
+// User Input
+#include <stdio.h>
+  int main() {
+      int number;
+      printf("Enter an integer: ");
+      scanf("%d", &number);
+      if (number % 2 == 0) {
+          printf("%d is even.\n", number);
+      } else {
+          printf("%d is odd.\n", number);
+      }
+      return 0;
+  }
+</pre>
+  
+        </div>
+        <div class="output">Enter an integer: 
+          15 is odd.
+          </div>
+      </section>
+
+      <!-- Swift Panel -->
+      <section class="panel">
+      
+        <div class="editor">
+          <pre>
+ // Direct Assign
+import Foundation
+let number = 8
+if number % 2 == 0 {
+    print("\(number) is Even")
+} else {
+    print("\(number) is Odd")
+}
+</pre >
+
+<pre>
+// User Input
+import Foundation
+print("Enter a number: ", terminator: "")
+if let input = readLine(), let number = Int(input) {
+    // Check if the number is even or odd
+    if number % 2 == 0 {
+        print("\(number) is Even.")
+    } else {
+        print("\(number) is Odd.")
+    }
+} else {
+    print("Invalid input. Please enter a valid integer.")
+}
+</pre >
+
+        </div>
+        <div class="output">Enter a number: 
+          10 is Even.
+          </div>
+   
+      </section>
+
+      <!-- Java Panel -->
+      <section class="panel">
+        <div class="editor">
+  // Direct Assign
+          <pre>
+ public class EvenOdd {
+public static void main(String[] args) {
+
+int number = 15; 
+ if (number % 2 == 0) {
+    System.out.println(number + " is Even.");
+  } else {
+    System.out.println(number + " is Odd.");
+  }
+}
+}
+          
+</pre>
+
+<pre>
+  // User Input
+  import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Check if the number is even or odd
+        if (number % 2 == 0) {
+            System.out.println(number + " is Even.");
+        } else {
+            System.out.println(number + " is Odd.");
+        }
+        scanner.close();
+    }
+}
+
+</pre>
+        </div>
+        <div class="output">Enter a number: 
+          10 is Even.
+          </div>
+      </div>
+
+      <!-- Python Panel -->
+      <section class="panel">
+    
+        <div class="editor">
+          <pre>
+// Direct Assign
+number = 15 
+if number % 2 == 0:
+print(f"{number} is Even.")
+else:
+print(f"{number} is Odd.")
+            
+</pre >
+
+<pre>
+// User Input
+number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print(f"{number} is Even.")
+else:
+    print(f"{number} is Odd.")
+
+</pre>
+        </div>
+        <div class="output">Enter a number: 
+          10 is Even.
+          </div>
+      </div>
+      <!-- new project -->
+        <!-- <div class="editor">
+          <p style="color: #FFA55D;">Assignment no 2</p>
+          <pre>
+  def greet(name):
+    return f"Hello, {name}"
+
+  print(greet("World"))
+  </pre
+          >
+        </div>
+        <div class="output">Hello, World</div>
+      </div> -->
+ </section>
+
+    <script src="./script.js"></script>
+   
+  </body>
+</html>
