@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Showcase UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f8f9fa;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #eee;
+      --editor-bg-light: #ffffff;
+      --editor-bg-dark: #2d2d2d;
+      --highlight: #007acc;
+      --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: 0.3s ease-in-out;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .tab {
+      background: #e0e0e0;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      box-shadow: var(--shadow);
+    }
+
+    .tab:hover {
+      background: #ccc;
+    }
+
+    .tab.active {
+      background: var(--highlight);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .panel {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      transition: var(--transition);
+    }
+
+    .panel.active {
+      display: flex;
+    }
+
+    .code-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .double-code-block {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .editor, .output {
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-height: 200px;
+      white-space: pre;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+     
+    }
+
+    .editor {
+      background: var(--editor-bg-light);
+      font-family: 'Fira Code', monospace;
+      
+    }
+
+    .output {
+      background: #121212;
+      color: #39ff14;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .screenshot {
+      width: 120px;
+      height: 100px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition);
+      cursor: pointer;
+    }
+
+    .screenshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .screenshot:hover {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 768px) {
+      .panel {
+        flex-direction: row;
+      }
+
+      .code-block {
+        flex-direction: row;
+      }
+
+      .editor, .output {
+        flex: 1;
+      }
+
+      .double-code-block {
+        flex-direction: row;
+      }
+    }
+    .editor {
+  background: var(--editor-bg-light);
+  font-family: 'Fira Code', monospace;
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.editor input[type="number"] {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  transition: var(--transition);
+}
+
+.editor input[type="number"]:focus {
+  border-color: var(--highlight);
+  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.2);
+  outline: none;
+}
+
+.editor button {
+  padding: 10px 18px;
+  background-color: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.editor button:hover {
+  background-color: #005f99;
+}
+
+.editor .note {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Projects</h1>
+    <div class="tabs">
+      <div class="tab active" onclick="showPanel(0)">JavaScript</div>
+      <div class="tab" onclick="showPanel(1)">C</div>
+      <div class="tab" onclick="showPanel(2)">Swift</div>
+      <div class="tab" onclick="showPanel(3)">Java</div>
+      <div class="tab" onclick="showPanel(4)">Python</div>
+    </div>
+
+    <div class="panel active">
+      <div class="editor" >
+ 
+  <input type="number" id="demo" placeholder="enter first number">
+note: second input from prompt
+note: 200 value is already assign
+  <button onclick="submitBtn()">Submit</button>
+
+
+      </div>
+      <!-- for code -->
+      
+        <div class="editor" >
+ 
+          <code>
+            function submitBtn() {
+   
+              let a = parseFloat(document.getElementById("demo").value);
+              let b = parseFloat(prompt("enter you second number"))
+              let c = a + b;
+              alert("The result is: " + c);
+              document.getElementById("result").innerHTML = c;
+             
+            }
+          </code>
+        
+              </div>
+  
+      <!-- end code js -->
+      <div class="output">
+    <h1 id="result">Result will appear here</h1>
+      </div>
+    
+    </div> 
+     <div class="code-box">
+      <!-- <code>
+let name = prompt("What is your name?");
+alert("Hello, " + name);
+
+function showAlert() {
+  let userInput = document.getElementById("nameInput").value;
+  alert("Hello, " + userInput);
+}
+      </code> -->
+    </div>
+
+   <!-- Right Output Box  -->
+    <!-- <div class="output-box">
+        <div>Hello! Try the button below:</div>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <br>
+        <button onclick="showAlert()">Greet with Alert</button>
+      </div>
+    </div>
+  
+    <script>
+      let name = prompt("What is your name?");
+      if (name) {
+        alert("Hello, " + name);
+      }
+  
+      function showAlert() {
+        let userInput = document.getElementById("nameInput").value;
+        if (userInput.trim() === "") {
+          alert("Please enter your name.");
+        } else {
+          alert("Hello, " + userInput);
+        }
+      }
+    </script> 
+    -->
+
+    <div class="panel">
+      <div class="editor">
+# Direct Assign
+#include <stdio.h>
+int main() {
+  int number = 7;  
+ if (number % 2 == 0) {
+      printf("%d is Even\n", number);
+  } else {
+      printf("%d is Odd\n", number);
+  }
+return 0;
+}
+# Basic Input/Output in C
+#include <stdio.h>
+  int mai n() {
+        int number;
+        printf("Enter a number: ");
+        scanf("%d", &number);
+        if (number % 2 == 0) {
+            printf("%d is Even\n", number);
+        } else {
+            printf("%d is Odd\n", number);
+        }
+        return 0;
+    }
+      </div>
+      <div class="output">
+7 is Odd
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="editor">
+// Swift Example:
+import Foundation
+let number = 8
+if number % 2 == 0 {
+    print("\(number) is Even")
+} else {
+    print("\(number) is Odd")
+}
+      </div>
+      <div class="output">
+Hello, World
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="editor">
+# Java Example:
+def greet(name):
+  return f"Hello, {name}"
+
+print(greet("World"))
+      </div>
+      <div class="output">
+Hello, World
+      </div>
+    </div>
+
+    <div class="panel">
+        <div class="editor">
+  # Python Example:
+  def greet(name):
+    return f"Hello, {name}"
+  
+  print(greet("World"))
+        </div>
+        <div class="output">
+  Hello, World
+        </div>
+      </div>
+  </div>
+
+ 
+
+<script src="./script.js"></script>
+</body>
+</html>
